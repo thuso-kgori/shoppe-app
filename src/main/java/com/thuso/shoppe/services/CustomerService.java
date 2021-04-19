@@ -1,7 +1,6 @@
 package com.thuso.shoppe.services;
 
 import com.thuso.shoppe.dto.CustomerDto;
-import com.thuso.shoppe.entity.Customer;
 import com.thuso.shoppe.mapper.CustomerMapper;
 import com.thuso.shoppe.repository.CustomerRepository;
 
@@ -15,7 +14,7 @@ public class CustomerService {
     @Inject
     CustomerRepository customerRepository;
 
-    public List<Customer> getCustomers(){ return customerRepository.findAlive(); }
+    public List<CustomerDto> getCustomers(){ return CustomerMapper.INSTANCE.customerEntityListToDtoList(customerRepository.findAlive()); }
 
     public CustomerDto getCustomer(String name){ return CustomerMapper.INSTANCE.userEntityToDto(customerRepository.findByName(name)); }
 

@@ -9,11 +9,20 @@ import static org.hamcrest.core.Is.is;
 class ShopperResourceTest {
 
     @Test
-    public void products() {
+    public void testGetProducts() {
         given()
                 .when().get("/shop/products")
                 .then()
                 .statusCode(200)
                 .body("$.size()", is(4));
+    }
+
+    @Test
+    public void testGetCustomers() {
+        given()
+                .when().get("/shop/customers")
+                .then()
+                .statusCode(200)
+                .body("$.size()", is(2));
     }
 }

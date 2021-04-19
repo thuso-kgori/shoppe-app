@@ -2,8 +2,8 @@ package com.thuso.shoppe.dto;
 
 public class CustomerDto {
     private String idNumber;
-    private String firstName;
-    private String lastName;
+    private String name;
+    private String surname;
     private Double points;
     private boolean status;
 
@@ -15,20 +15,20 @@ public class CustomerDto {
         this.idNumber = idNumber;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public boolean isStatus() {

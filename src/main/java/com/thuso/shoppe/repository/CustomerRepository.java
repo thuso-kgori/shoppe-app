@@ -29,5 +29,6 @@ public class CustomerRepository implements PanacheRepository<Customer> {
 
     @Transactional
     public void updatePointBalance(Double points, String customerId){
-        Customer.update("points = :points where idNumber = :customerId", Parameters.with("points", points).and("customerId", customerId)); }
+        Customer.update("points = :points where idNumber = :customerId",
+                Parameters.with("points", points).and("customerId", customerId)); }
 }

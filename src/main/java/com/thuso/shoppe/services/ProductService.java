@@ -15,7 +15,9 @@ public class ProductService {
     @Inject
     ProductRepository productRepository;
 
-    public ProductDto getProduct(String code){ return ProductMapper.INSTANCE.productEntityToDto(productRepository.findByCode(code)); }
-    public List<ProductDto> getProducts(){ return ProductMapper.INSTANCE.productEntityListToDtoList(productRepository.findAlive()); }
+    public ProductDto getProduct(String code){
+        return ProductMapper.INSTANCE.productEntityToDto(productRepository.findByCode(code)); }
+    public List<ProductDto> getProducts(){
+        return ProductMapper.INSTANCE.productEntityListToDtoList(productRepository.findAlive()); }
 
 }

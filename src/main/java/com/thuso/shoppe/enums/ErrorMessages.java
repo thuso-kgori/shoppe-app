@@ -1,4 +1,4 @@
-package com.thuso.shoppe;
+package com.thuso.shoppe.enums;
 
 public enum ErrorMessages {
     CUSTOMER_DATA("Customer data not provided."),

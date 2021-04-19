@@ -1,6 +1,6 @@
 package com.thuso.shoppe.services;
 
-import com.thuso.shoppe.ErrorMessages;
+import com.thuso.shoppe.enums.ErrorMessages;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
 @QuarkusTest
 class ProcessorServiceTest {
     @Test
-    void purchase() {
+    void testPurchaseOrder() {
         given()
                 .body("{\n" +
                         "\t\"customerId\": \"55544\",\n" +
@@ -26,7 +26,7 @@ class ProcessorServiceTest {
     }
 
     @Test
-    void purchaseExpensiveProduct() {
+    void testPurchaseOrderWithExpensiveProduct() {
         given()
                 .body("{\n" +
                         "\t\"customerId\": \"55544\",\n" +
@@ -41,7 +41,7 @@ class ProcessorServiceTest {
     }
 
     @Test
-    void purchaseUnavailableProduct() {
+    void testPurchaseOrderWithUnavailableProduct() {
         given()
                 .body("{\n" +
                         "\t\"customerId\": \"55544\",\n" +
@@ -56,7 +56,7 @@ class ProcessorServiceTest {
     }
 
     @Test
-    void unknownUser() {
+    void testWithUnknownUser() {
         given()
                 .body("{\n" +
                         "\t\"customerId\": \"9924433\",\n" +
